@@ -1,0 +1,266 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*-------------------- start editing here ------------------ */
+
+
+
+body{
+	background-color: blue;
+}
+
+header{
+	background-color: green;
+	height: 100px;
+}
+
+nav{
+	width: 40%;
+	/*background-color: yellow;*/
+	display: inline-block;
+}
+
+#mobileNav{
+	display: none;
+}
+
+li{
+	display: inline-block;
+	padding: 10px;
+	/*background-color: purple;*/
+}
+
+#moveRight{
+	margin-left: 50px;
+}
+
+#socialImages{
+	width: 40%;
+	/*background-color: pink;*/
+	float: right;
+}
+	
+img.socialSize{
+	height: 80px;
+	width: auto;
+}
+
+h1, h2, h3, p{
+	font-family: 'Roboto Mono', monospace;
+}
+
+h1{
+	color:orange;
+	background-color: white;
+	font-weight: 700;
+	font-size: 62px;
+}
+
+p{
+   color: purple;
+}
+
+.videoSet h3{
+	font-weight: bold;
+	color: green;
+	font-size: 48px;
+}
+
+.videoSet p{
+	color: green;
+	font-size: 18px;
+	width: 50%;
+}
+
+.videoSet video{
+	width: 50%;
+	height: auto;
+}
+
+
+/* The animation code */
+@keyframes example {
+  from {background-color: blue;}
+  to {background-color: orange;}
+}
+
+
+@keyframes test {
+  from {background-color: yellow;}
+  to {background-color: purple;}
+}
+
+
+#middleArea{
+	background-color: yellow;
+	animation: test 2s forwards;
+	position: relative;
+	width: 100vw;
+	left: -1200px;
+	transition: left 2s;
+}
+
+#middleArea:hover{
+	left: 0;
+}
+
+h2{
+	text-align: right;
+}
+
+.threeCol{
+	width: 21%;
+	padding: 3%;
+	margin: 3%;
+	display: inline-block;
+	animation: example 2s forwards;
+	height: 150px;
+	transition: height 2s;
+	/*overflow: hidden;*/
+}
+
+.threeCol:hover{
+	height: 300px;
+}
+
+
+
+img.sizeImage{
+	width: 50%;
+	height: auto;
+	transform: scale(1,1);
+	transform-origin: top left;
+	/* 	Allows you to change the position on transformed elements */
+	/*-ms-transform: matrix(1, 0, 0, 1, 0, 0); /* IE 9 */
+	/*transform: matrix(1, 0, 0, 1, 0, 0);*/
+	transition: transform 1s;
+}
+
+img.sizeImage:hover{
+	transform: scale(2,2);
+	/*-ms-transform: matrix(2, 0, 0, 2, 70, 70); /* IE 9 */
+	/*transform: matrix(2, 0, 0, 2, 70, 70);*/
+}
+
+.twoCol{
+	width: 36%;
+	padding: 3%;
+	margin: 3%;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.blue{
+	background-color: blue;
+}
+
+
+
+@media screen and (min-width: 721px) and (max-width:990px) {
+body {
+    background-color: yellow;
+}
+  
+h1{
+	font-size: 36px;
+}
+
+#middleArea{
+	left: -600px;
+}
+
+
+#socialImages{
+	width: 55%;
+}
+
+.threeCol{
+	width: 20%;
+}
+}
+
+
+@media screen and (max-width: 720px) {
+body {
+    background-color: lightgreen;
+}
+
+#mobileNav{
+	display: block;
+}
+
+#desktopNav{
+	display: none;
+}
+  
+h1{
+	font-size: 24px;
+}
+
+.threeCol{
+	width: 88%;
+	display: block;
+}
+
+#middleArea{
+	left: -400px;
+}
+
+nav{
+	width: 30%;
+}
+#socialImages{
+	width: 70%;
+}
+
+img.socialSize{
+	height: 60px;
+	width: auto;
+}
+}
